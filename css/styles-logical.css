@@ -28,29 +28,34 @@
 
 :root {
     font-size: 16px;
-    --gray30: #212121;
-    --gray20: #212429;
-    --gray10: #616161;
+    --white30: white;
+    --white20: #A5A3A5;
+    --white10: #3A3539;
 }
 
 body {
-    color: var(--gray30);
-    font-family: 'Roboto', sans-serif;
+    color: var(--white30);
+    font-family: 'Nunito', sans-serif;
+    background: #251F24;
     /*font-family: charter;*/
 }
 
 header {
     font-size: 14px;
-    color: var(--gray10);
+    color: white;
 }
 
 header a {
-    color: var(--gray10);
+    color: var(--white20);
     text-decoration: none;
 }
 
+header li {
+    color: var(--white20);
+}
+
 header a:hover {
-    color: var(--gray30);
+    color: var(--white30);
 }
 
 nav details summary {
@@ -59,22 +64,33 @@ nav details summary {
 
 h1 {
     font-size: 3.75rem;
+    font-weight: normal;
 }
 
 h2 {
     font-size: 2rem;
+    font-weight: normal;
 }
 
 h3 {
     font-size: 1.5rem;
+    font-weight: normal;
 }
 
 a {
-    color: var(--gray30);
+    color: var(--white30);
+}
+
+p {
+    color: var(--white20);
+}
+
+pre {
+    background: var(--white10);
 }
 
 .hero {
-    background-image: linear-gradient(to top, rgba(255, 255, 255, .3), transparent), url('../images/pattern.png');
+    background: linear-gradient(96.07deg, #314755 30.63%, #26A0DA 102.18%);
     height: 350px;
 }
 
@@ -94,6 +110,6 @@ h3::after {
     content: '';
     width: 80px;
     height: 4px;
-    background: var(--gray30);
+    background: var(--white30);
     display: inline-block;
 }

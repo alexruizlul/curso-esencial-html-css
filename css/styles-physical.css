@@ -33,6 +33,10 @@
     --gray10: #616161;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     color: var(--gray30);
     font-family: 'Roboto', sans-serif;
@@ -42,12 +46,21 @@ body {
 
 header {
     font-size: 14px;
+    width: 188px;
     color: var(--gray10);
+    position: absolute;
+    top: 64px;
+    left: -232px;
+    z-index: 1;
 }
 
 header a {
     color: var(--gray10);
     text-decoration: none;
+}
+
+header li {
+    margin-bottom: 16px;
 }
 
 header a:hover {
@@ -56,10 +69,31 @@ header a:hover {
 
 nav details summary {
     font-weight: bold;
+    line-height: 24px;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+}
+
+.header-content {
+    position: relative;
+}
+
+
+.wrapper {
+    width: 902px;
+    margin: auto;
+}
+
+.main-content {
+    /*padding: 20px;*/
 }
 
 h1 {
     font-size: 3.75rem;
+    font-weight: normal;
     margin-top: 64px;
     margin-bottom: 16px;
 }
@@ -83,6 +117,16 @@ h3 {
     margin-top: 16px;
     margin-bottom: 24px;
     font-weight: normal; 
+    position: sticky;
+    top: 0;
+    background: white;
+}
+
+pre {
+    background: #FEC62E;
+    padding: 40px;
+    font-family: 'Roboto';
+    line-height: 24px;
 }
 
 a {
@@ -90,7 +134,19 @@ a {
 }
 
 blockquote {
+    font-size: 24px;
     margin: 32px 0;
+    padding-left: 16px;
+    border-left: 4px solid var(--gray30);
+    line-height: 24px;
+}
+
+blockquote span {
+    color: var(--gray10);
+}
+
+blockquote span::before {
+    content: '-';
 }
 
 .hero {
@@ -100,6 +156,7 @@ blockquote {
 
 .section-content {
     margin-top: 164px;
+    position: relative;
 }
 
 .section-content:first-of-type {
@@ -128,16 +185,20 @@ blockquote {
 
 .section-content h3 {
     counter-increment: titleList;
+    padding-bottom: 8px;
 }
 
-h3::before {
-    content: counter(titleList, decimal)".";
+.section-content h3::before {
+    content: counter(titleList, decimal)". ";
 }
 
-h3::after {
+.section-content h3::after {
     content: '';
     width: 80px;
     height: 4px;
     background: var(--gray30);
     display: inline-block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
 }
